@@ -13,3 +13,19 @@ npx hardhat node
 node scripts/deploy.js
 npx hardhat help
 ```
+
+## Rinkey Faucet
+
+Get some ethers for Rinkey Testnet.
+
+https://faucets.chain.link/rinkeby
+
+## Rinkeby Deployment
+
+```bash
+cp .env.sample .env
+# provide INFURA_KEY and your Rinkey Wallet's private key
+
+# now, we can simply deploy
+npx hardhat run scripts/deploy.js --network rinkeby
+```

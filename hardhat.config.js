@@ -1,4 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
+const RINKEBY_PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY;
+const INFURA_KEY = process.env.INFURA_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -18,4 +20,13 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  networks: {
+    hardhat: {},
+    rinkeby: {
+      url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
+      accounts: [`${RINKEBY_PRIVATE_KEY}`],
+      network_id: "4",
+      gas: 4600000
+    }
+  }
 };
