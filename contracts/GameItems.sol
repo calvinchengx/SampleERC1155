@@ -11,7 +11,7 @@ contract GameItems is ERC1155 {
     uint256 public constant SWORD = 3;
     uint256 public constant SHIELD = 4;
 
-    constructor() ERC1155("https://calvinchengx.github.io/SampleERC1155/api/token/{id}.json") {
+    constructor() ERC1155("https://lab1.calvinx.com/api/token/{id}.json") {
         _mint(msg.sender, GOLD, 10**18, "");
         _mint(msg.sender, SILVER, 10**27, "");
         _mint(msg.sender, THORS_HAMMER, 1, "");
