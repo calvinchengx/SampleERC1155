@@ -29,3 +29,5 @@ cp .env.sample .env
 # now, we can simply deploy
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
+
+We can verify our contract on OpenSea testnet - https://testnets.opensea.io/get-listed
